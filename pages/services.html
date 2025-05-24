@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaces Co. - What We Do</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Page specific styles */
+        .services-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/04.png') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+        }
+        
+        .services-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .services-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .service-item {
+            margin-bottom: 80px;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .service-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .service-features {
+            margin-top: 25px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .service-cta {
+            margin-top: 30px;
+        }
+        
+        .service-image {
+            order: 1;
+        }
+        
+        .service-item:nth-child(even) .service-grid .service-image {
+            order: -1;
+        }
+        
+        @media (max-width: 992px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-image, .service-item:nth-child(even) .service-grid .service-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .service-text h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Spaces Co. Logo" height="60">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" class="active">What We Do</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="process.html">Our Process</a></li>
+                    <li><a href="clients.html">Our Clients</a></li>
+                    <li><a href="factory.html">Our Factory</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>What We Do</h1>
+            <p>Comprehensive services to bring your vision to life</p>
+        </div>
+    </section>
+
+    <!-- Services Content Section -->
+    <section class="services-content">
+        <div class="container">
+            <div class="services-intro">
+                <h2>Our Services</h2>
+                <div class="section-divider"></div>
+                <p>At Spaces Co., we offer comprehensive FF&E (Furniture, Fixtures, and Equipment) services for hospitality, corporate, and residential environments. Our turnkey solutions ensure a seamless experience from concept to completion, delivering high-quality furnishing that balances aesthetics, functionality, and durability.</p>
+            </div>
+
+            <!-- Service 1 - Joinery and Custom Furniture -->
+            <div class="service-item">
+                <div class="service-grid">
+                    <div class="service-text">
+                        <h3><i class="fas fa-couch"></i> Joinery & Custom Furniture</h3>
+                        <p>Our expert craftsmen create bespoke furniture and joinery solutions tailored to your specific requirements. From custom cabinets and millwork to unique furniture pieces, we combine traditional craftsmanship with modern techniques to deliver exceptional quality and precision.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Custom case goods and millwork</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Bespoke furniture design and manufacturing</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>High-quality materials and craftsmanship</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Specialized hotel and contract furniture</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-cta">
+                            <a href="contact.html" class="btn">Request A Consultation</a>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="../images/01.png" alt="Custom Joinery and Furniture" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 - Lighting & Electrical -->
+            <div class="service-item">
+                <div class="service-grid">
+                    <div class="service-text">
+                        <h3><i class="fas fa-lightbulb"></i> Lighting & Electrical</h3>
+                        <p>We provide comprehensive lighting solutions that enhance the ambiance and functionality of your space. From decorative fixtures to integrated lighting systems, our team delivers solutions that combine aesthetic appeal with practical performance.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Custom lighting fixtures and chandeliers</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Ambient, task, and accent lighting</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Energy-efficient LED solutions</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Customized lighting plans for each space</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-cta">
+                            <a href="projects.html" class="btn">View Lighting Projects</a>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="../images/02.png" alt="Lighting Solutions" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 - Curtains & Soft Furnishings -->
+            <div class="service-item">
+                <div class="service-grid">
+                    <div class="service-text">
+                        <h3><i class="fas fa-paint-roller"></i> Curtains & Soft Furnishings</h3>
+                        <p>We provide exquisite curtains, drapery, and soft furnishings that add texture, color, and warmth to your spaces. Our expert team handles everything from fabric selection to installation, ensuring a perfect fit and finish.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Custom drapes, curtains, and window treatments</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Upholstery and reupholstery services</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Premium fabrics and materials</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Fire-retardant options for hospitality projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-cta">
+                            <a href="projects.html" class="btn">View Our Projects</a>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="../images/03.png" alt="Curtains and Soft Furnishings" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 - Flooring & Wall Coverings -->
+            <div class="service-item">
+                <div class="service-grid">
+                    <div class="service-text">
+                        <h3><i class="fas fa-layer-group"></i> Flooring & Wall Coverings</h3>
+                        <p>We provide high-quality flooring and wall covering solutions that enhance the aesthetic appeal and functionality of your space. From luxury carpets to bespoke wall treatments, we offer a wide range of options to suit your design requirements.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Dedicated project manager for each client</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Detailed timeline and milestone planning</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Budget management and cost control</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <p>Vendor coordination and quality control</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-cta">
+                            <a href="process.html" class="btn">Learn About Our Process</a>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="../images/04.png" alt="Project Management" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Contact us today for a free consultation</p>
+            <a href="contact.html" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Spaces Co.</h2>
+                    <p>Creating exceptional spaces since [Year]</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">What We Do</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Spaces Contract Furnishing, Saudi Arabia</p>
+                    <p><i class="fas fa-phone"></i> +966 565961303</p>
+                    <p><i class="fas fa-envelope"></i> info@spacescontract.com</p>
+                    <p><i class="fas fa-globe"></i> www.spacescontract.com</p>
+                </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Spaces Co. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

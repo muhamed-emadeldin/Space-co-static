@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaces Co. - Our Factory</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Page specific styles */
+        .factory-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/01.png') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+        }
+        
+        .factory-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .factory-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .factory-overview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .factory-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .factory-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light-color);
+            border-radius: 5px;
+        }
+        
+        .stat-card h4 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .facilities-section {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .facility-card {
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .facility-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .facility-info {
+            padding: 20px;
+        }
+        
+        .facility-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .capabilities-section {
+            padding: 80px 0;
+        }
+        
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+        
+        .capability-category {
+            margin-bottom: 40px;
+        }
+        
+        .capability-category h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .capability-category h3 i {
+            margin-right: 15px;
+        }
+        
+        .capability-list {
+            list-style: none;
+        }
+        
+        .capability-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .capability-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .capability-list li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .gallery-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 5px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .sustainability-section {
+            padding: 80px 0;
+        }
+        
+        .sustainability-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .sustainability-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .sustainability-points {
+            margin-top: 30px;
+        }
+        
+        .sustainability-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .point-icon {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .factory-overview, .sustainability-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .capability-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .factory-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .factory-text h3, .capability-category h3, .sustainability-text h3 {
+                font-size: 1.5rem;
+            }
+            
+            .stat-card h4 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Spaces Co. Logo" height="60">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">What We Do</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="process.html">Our Process</a></li>
+                    <li><a href="clients.html">Our Clients</a></li>
+                    <li><a href="factory.html" class="active">Our Factory</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="factory-hero">
+        <div class="container">
+            <h1>Our Factory</h1>
+            <p>Where innovation meets craftsmanship</p>
+        </div>
+    </section>
+
+    <!-- Factory Content Section -->
+    <section class="factory-content">
+        <div class="container">
+            <div class="factory-intro">
+                <h2>Our Production Facility</h2>
+                <div class="section-divider"></div>
+                <p>At the heart of our operations is our state-of-the-art manufacturing facility, where skilled craftsmen and advanced technology come together to create exceptional spaces. Our factory is equipped with the latest tools and machinery, enabling us to deliver high-quality products with precision and efficiency.</p>
+            </div>
+
+            <div class="factory-overview">
+                <div class="factory-text">
+                    <h3>World-Class Manufacturing</h3>
+                    <p>Our 50,000-square-foot production facility houses specialized departments for various fabrication processes, from woodworking and metal fabrication to finishing and assembly. This integrated approach allows us to maintain strict quality control and ensure seamless coordination across all aspects of production.</p>
+                    <p>We continuously invest in advanced machinery and train our team in the latest techniques to stay at the forefront of fabrication technology. This commitment to excellence enables us to tackle complex projects with precision and creativity.</p>
+                    
+                    <div class="factory-stats">
+                        <div class="stat-card">
+                            <h4>50,000</h4>
+                            <p>Square Feet</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>40+</h4>
+                            <p>Skilled Craftsmen</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>15+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="factory-image">
+                    <img src="../images/01.png" alt="Factory Overview" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Facilities</h2>
+                <div class="section-divider"></div>
+                <p>Our comprehensive production facility includes specialized departments to handle every aspect of fabrication.</p>
+            </div>
+
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="../images/02.png" alt="Woodworking Department" class="img-fluid">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Woodworking Department</h3>
+                        <p>Our woodworking department is equipped with precision machinery for cutting, shaping, and finishing wood components. From custom millwork to intricate joinery, our skilled craftsmen create exceptional wooden elements for any project.</p>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="../images/03.png" alt="Metal Fabrication" class="img-fluid">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Metal Fabrication</h3>
+                        <p>Our metal fabrication area features cutting-edge welding equipment, CNC metal cutting machines, and forming tools. This allows us to create custom metal components with precision and durability for various applications.</p>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="../images/04.png" alt="Finishing Department" class="img-fluid">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Finishing Department</h3>
+                        <p>Our dedicated finishing department ensures that every piece receives the perfect finish. From paint and stain applications to specialized treatments, we achieve consistent, high-quality finishes that protect and enhance our products.</p>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="../images/01.png" alt="Assembly Area" class="img-fluid">
+                    </div>
+                    <div class="facility-info">
+                        <h3>Assembly Area</h3>
+                        <p>In our spacious assembly area, components come together to create finished products. Our meticulous assembly process ensures that every piece meets our exacting standards before leaving the factory for installation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Capabilities</h2>
+                <div class="section-divider"></div>
+                <p>We offer a wide range of fabrication capabilities to bring your designs to life with precision and quality.</p>
+            </div>
+
+            <div class="capability-grid">
+                <div class="capability-category">
+                    <h3><i class="fas fa-cut"></i> Woodworking</h3>
+                    <ul class="capability-list">
+                        <li><i class="fas fa-check"></i> Custom cabinetry and millwork</li>
+                        <li><i class="fas fa-check"></i> Architectural woodwork and detailing</li>
+                        <li><i class="fas fa-check"></i> CNC routing and carving</li>
+                        <li><i class="fas fa-check"></i> Solid surface fabrication</li>
+                        <li><i class="fas fa-check"></i> Veneering and laminating</li>
+                        <li><i class="fas fa-check"></i> Custom furniture production</li>
+                    </ul>
+                </div>
+
+                <div class="capability-category">
+                    <h3><i class="fas fa-wrench"></i> Metal Fabrication</h3>
+                    <ul class="capability-list">
+                        <li><i class="fas fa-check"></i> Welding (MIG, TIG, and spot welding)</li>
+                        <li><i class="fas fa-check"></i> Sheet metal work</li>
+                        <li><i class="fas fa-check"></i> CNC cutting and forming</li>
+                        <li><i class="fas fa-check"></i> Custom metal fixtures and displays</li>
+                        <li><i class="fas fa-check"></i> Structural steel fabrication</li>
+                        <li><i class="fas fa-check"></i> Decorative metal elements</li>
+                    </ul>
+                </div>
+
+                <div class="capability-category">
+                    <h3><i class="fas fa-paint-roller"></i> Finishing</h3>
+                    <ul class="capability-list">
+                        <li><i class="fas fa-check"></i> Custom paint matching and application</li>
+                        <li><i class="fas fa-check"></i> Staining and wood finishing</li>
+                        <li><i class="fas fa-check"></i> Powder coating</li>
+                        <li><i class="fas fa-check"></i> Specialty finishes and textures</li>
+                        <li><i class="fas fa-check"></i> Sealing and protection treatments</li>
+                        <li><i class="fas fa-check"></i> Weatherproofing for exterior applications</li>
+                    </ul>
+                </div>
+
+                <div class="capability-category">
+                    <h3><i class="fas fa-desktop"></i> Design & Engineering</h3>
+                    <ul class="capability-list">
+                        <li><i class="fas fa-check"></i> 3D modeling and rendering</li>
+                        <li><i class="fas fa-check"></i> CAD/CAM programming</li>
+                        <li><i class="fas fa-check"></i> Structural engineering</li>
+                        <li><i class="fas fa-check"></i> Prototyping and sample creation</li>
+                        <li><i class="fas fa-check"></i> Design for manufacturability</li>
+                        <li><i class="fas fa-check"></i> Material specification and sourcing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factory Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Factory Gallery</h2>
+                <div class="section-divider"></div>
+                <p>Take a visual tour of our production facility and see our craftsmanship in action.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/01.png" alt="Factory Production Line" class="img-fluid">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/02.png" alt="Woodworking Process" class="img-fluid">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/03.png" alt="Metal Fabrication Process" class="img-fluid">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/04.png" alt="Finishing Process" class="img-fluid">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/01.png" alt="Quality Control" class="img-fluid">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/02.png" alt="Assembly Process" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sustainable Manufacturing</h2>
+                <div class="section-divider"></div>
+                <p>Our commitment to environmental responsibility is integrated into our production processes and material choices.</p>
+            </div>
+
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h3>Our Environmental Commitment</h3>
+                    <p>At Spaces Co., we recognize the importance of sustainable manufacturing practices and are committed to minimizing our environmental impact. We continuously seek ways to reduce waste, conserve energy, and utilize eco-friendly materials in our production process.</p>
+                    
+                    <div class="sustainability-points">
+                        <div class="sustainability-point">
+                            <div class="point-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-text">
+                                <h4>Waste Reduction</h4>
+                                <p>Our optimized cutting and manufacturing processes minimize material waste, and we recycle wood, metal, and packaging materials whenever possible.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="sustainability-point">
+                            <div class="point-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="point-text">
+                                <h4>Sustainable Materials</h4>
+                                <p>We source responsibly harvested wood, recycled metals, and eco-friendly finishes to reduce our environmental footprint.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="sustainability-point">
+                            <div class="point-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="point-text">
+                                <h4>Energy Efficiency</h4>
+                                <p>Our facility utilizes energy-efficient lighting, equipment, and processes to reduce our energy consumption and carbon emissions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sustainability-image">
+                    <img src="../images/03.png" alt="Sustainable Manufacturing" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Bring Your Vision to Life?</h2>
+            <p>Let our manufacturing expertise turn your ideas into reality</p>
+            <a href="contact.html" class="btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Spaces Co.</h2>
+                    <p>Creating exceptional spaces since [Year]</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">What We Do</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Spaces Contract Furnishing, Saudi Arabia</p>
+                    <p><i class="fas fa-phone"></i> +966 565961303</p>
+                    <p><i class="fas fa-envelope"></i> info@spacescontract.com</p>
+                    <p><i class="fas fa-globe"></i> www.spacescontract.com</p>
+                </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Spaces Co. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
