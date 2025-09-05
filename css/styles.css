@@ -259,7 +259,7 @@ header .container {
 
 .service-card {
     background-color: #fff;
-    padding: 30px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: var(--box-shadow);
     text-align: center;
